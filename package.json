@@ -1,0 +1,16 @@
+{
+  "name": "cowrywise-clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Princewill Chiaka <9r1nc3w1ll@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx http-server dist -p 5000",
+    "build:css": "NODE_ENV=production tailwindcss build src/style.css -o dist/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.3",
+    "tailwindcss": "^2.0.2"
+  }
+}
