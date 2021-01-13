@@ -5,11 +5,17 @@
   "author": "Princewill Chiaka <9r1nc3w1ll@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npx http-server dist -p 5000",
-    "build:css": "NODE_ENV=production tailwindcss build src/style.css -o dist/css/style.css"
+    "start": "run-p serve build:watch",
+    "serve": "http-server dist -p 5000",
+    "build:watch": "nodemon -x npm run build:css -w tailwind.config.js -w src/style.css",
+    "build:css": "tailwindcss build src/style.css -o dist/css/style.css",
+    "build:prod": "NODE_ENV=production tailwindcss build src/style.css -o dist/css/style.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.1",
+    "http-server": "^0.12.3",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.2.3",
     "tailwindcss": "^2.0.2"
   }
