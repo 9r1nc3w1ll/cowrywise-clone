@@ -1,5 +1,10 @@
 module.exports = {
-  purge: false, // or and array []
+  purge: {
+    content: ['./src/**/*.html'],
+    options: {
+      fontFace: true,
+    },
+  }, // false or an array []
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
