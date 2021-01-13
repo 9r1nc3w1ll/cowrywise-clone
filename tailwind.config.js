@@ -1,9 +1,6 @@
 module.exports = {
   purge: {
-    content: ['./src/**/*.html'],
-    options: {
-      fontFace: true,
-    },
+    content: ['./dist/**/*.html'],
   }, // false or an array []
   darkMode: false, // or 'media' or 'class'
   theme: {
